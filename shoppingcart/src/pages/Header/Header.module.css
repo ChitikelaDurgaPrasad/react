@@ -1,0 +1,12 @@
+.navLink {
+  color: grey;
+  text-decoration: none;
+}
+
+.navLink.active {
+  color: red;
+}
+
+.navLink.pending {
+  color: blue;
+}
