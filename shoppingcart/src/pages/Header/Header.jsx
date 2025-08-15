@@ -10,6 +10,16 @@ export const Header = () => {
     <div className="d-flex justify-content-between py-2">
       <div>
         <NavLink
+          to="/admin"
+          className={({ isActive, isPending }) =>
+            `${styles.navLink} ${isPending ? styles.pending : isActive ? styles.active : ""}`
+          }
+        >
+          Admin
+        </NavLink>
+      </div>
+      <div>
+        <NavLink
           to="/home"
           className={({ isActive, isPending }) =>
             `${styles.navLink} ${isPending ? styles.pending : isActive ? styles.active : ""}`

@@ -1,5 +1,6 @@
 import { privateApi } from "./axiosPrivateInstance";
 import { publicApi } from "./axiosPublicInstance";
-import { loginUser } from "./apiAuth";
+import { loginUser } from "./authApi";
+import { userDetails } from "./userDetailsApi";
 
-export {privateApi, publicApi, loginUser}
+export {privateApi, publicApi, loginUser, userDetails}

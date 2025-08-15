@@ -19,6 +19,7 @@
 
     // Fetch data when page changes
     useEffect(() => {
+      console.log("USeEffect call");
       if (!hasMore || isFetching.current) return;
 
       isFetching.current = true;
@@ -104,7 +105,7 @@
       <div>
         <div className="mb-4 mt-3 mx-3">
           <button type="button" onClick={() => setCounter((prev) => prev + 1)}>
-            Button
+            {counter}
           </button>
         </div>
         <Grid

@@ -16,10 +16,14 @@ privateApi.interceptors.request.use(
     (error) => Promise.reject(error)
 );
 
-// privateApi.interceptors.response.use(
-//     (response) => response,
-//     (error) => {
-//         console.error('API Error:', error.response || error.message);
-//         return Promise.reject(error);
-//     }
-// )
+privateApi.interceptors.response.use(
+    (response) => response,
+    (error) => {
+        if(error.response && error.response.status === 401){
+            console.log('Token expired or unauthorized — logging out');
+            localStorage.removeItem('token');
+            window.location.href = '/login';
+        }
+        return Promise.reject(error);
+    }
+)

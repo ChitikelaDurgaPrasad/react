@@ -29,7 +29,7 @@ export const Login = () => {
         const credentials = {username : username, password : password}
         try {
             const response = await loginUser(username, password);
-            console.log(response.data.accessToken);
+            // console.log(response.data.accessToken);
             const data = response.data;
             if(data.accessToken){
                 // sessionStorage.setItem("token", data.token);
